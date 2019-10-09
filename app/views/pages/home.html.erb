@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!-- app/views/pages/home.html.erb -->
+<%= content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1>Toys and Boxes</h1>
+    <p>So much more than a toy shop</p>
+    <%= link_to "Take a look", new_user_session_path, class: "btn btn-lg btn-primary"  %>
+  </div>
+</div>
+

@@ -1,6 +1,10 @@
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #202346;
+    .nav-link  {
+    color: white !important;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,13 +15,24 @@
   width: 30px;
 }
 
+.navbar-home .home {
+  visibility: hidden;
+}
+
 .navbar-home {
   position: absolute;
   width: 100%;
   background: transparent;
   box-shadow: none;
-  .nav-link {
+  .nav-link  {
     color: white !important;
-
   }
+
+}
+.user_icon_empty{
+  margin-top: 7px;
+}
+
+.nav-item{
+  margin-right: 30px;
 }

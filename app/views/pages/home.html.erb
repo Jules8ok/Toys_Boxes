@@ -6,7 +6,24 @@
   <div class="banner-content text-center">
     <h1>Toys and Boxes</h1>
     <p>So much more than a toy shop</p>
-    <%= link_to "Let's play!", products_path, class: "btn btn-lg btn-primary"  %>
+    <%= link_to "Our products", products_path, class: "btn btn-lg btn-primary"  %>
+
+
+
+    <div class= "container-button-our-products">
+      <%= link_to products_path do %>
+
+      <div class="svg-wrapper">
+        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+          <rect class="shape" height="60" width="320" />
+        </svg>
+        <div class="text">Our products</div>
+      </div>
+
+      <% end %>
+    </div>
+
+
   </div>
 </div>
 

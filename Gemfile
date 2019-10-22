@@ -16,6 +16,11 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'jquery-rails'
+gem 'money-rails'
+gem 'stripe'
+gem 'stripe_event'
+gem 'figaro'
+
 
 
 
@@ -25,6 +30,8 @@ end
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

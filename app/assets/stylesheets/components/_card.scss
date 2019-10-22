@@ -61,8 +61,15 @@
   padding-right: 50px;
   padding-left: 50px;
   position:absolute;
-  margin-top: -30px
+  margin-top: -30px;
 }
+a { color: inherit; }
+a {
+  &:hover{
+    color: inherit;
+  }
+}
+
 .card-category-button {
   display: none;
   &:hover {
@@ -72,7 +79,7 @@
 }
 
 .card-super-container {
-    &:hover {
+  &:hover {
     .card-category-button{
       display: block;
     }
@@ -119,6 +126,8 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
 
 
 

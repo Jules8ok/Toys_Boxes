@@ -1,13 +1,9 @@
 class OrdersController < ApplicationController
 
   def create
-
-
+    Stripe.api_key = 'sk_test_AvFSR1z9OtrXuymMq6ohpTpC00WmjcIc4z'
     product = Product.find(params[:product_id])
     order  = Order.create!(product: product, product_sku: product.sku, amount: product.price, state: 'pending', user: current_user)
-
-
-
     session = Stripe::Checkout::Session.create(
 
 
@@ -26,9 +22,6 @@ class OrdersController < ApplicationController
     order.update(checkout_session_id: session.id)
     redirect_to new_order_payment_path(order)
 
-
-
-
   end
 
 
@@ -36,6 +29,9 @@ class OrdersController < ApplicationController
     @order = current_user.orders.find(params[:id])
   end
 
+  def index
+    @orders = current_user.orders.all
+  end
 
 end
 

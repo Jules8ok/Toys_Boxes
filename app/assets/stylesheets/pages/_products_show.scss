@@ -27,12 +27,14 @@ ul,li { list-style:none; }
   background-size: 350px 350px;
   background-repeat: no-repeat;
 }
-
+.hidden{
+  visibility: hidden;
+}
 .card-category-button-show {
   background-color: white;
   border-style: solid;
-  border-color: #202346;
-  color:#202346;
+  border-color: #2D2D2D;
+  color:#2D2D2D;
   border-width: 3px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -43,7 +45,7 @@ ul,li { list-style:none; }
 
 .card-category-button-show {
   &:hover {
-    background-color: #202346;
+    background-color: #2D2D2D;
     color: white;
   }
 }

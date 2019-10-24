@@ -1,3 +1,28 @@
 .default-margin {
   margin-top: 100px;
 }
+
+.sign_up_btn {
+
+ background-color: white;
+ border-style: solid;
+ border-color: #2D2D2D;
+ color:#2D2D2D;
+ border-width: 3px;
+
+}
+
+.sign_up_btn {
+  &:hover {
+    background-color: #2D2D2D;
+    color: white !important;
+  }
+}
+
+.devise_registration_links{
+  margin-top: 10px;
+}
+
+.devise_registration_links_first{
+  margin-top: 25px;
+}

@@ -1,26 +1,29 @@
-
-<div class="container">
-  <div class="row py-4">
-    <div class="col-md-3"><%= image_tag @order.product.photo_url, width: '100%' %></div>
-    <div class="col">
-      <h1>Checkout summary</h1>
+  <h1>Checkout summary</h1>
+  <div class="product-screen-container">
+    <div class="product-screen-left-container">
+      <div class="product-photo"><%= image_tag @order.product.photo_url, width: '100%' %></div>
+    </div>
+    <div class="product-screen-right-container">
       <p>Purchase of <strong><%= @order.product.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-      <button id="pay" class="btn btn-primary">Pay</button>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
+      <div class="col">
+        <button id="pay" class="card-category-button-show">Pay</button>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          const paymentButton = document.getElementById('pay');
+          paymentButton.addEventListener('click', () => {
 
-          const stripe = Stripe('pk_test_D82iopKvGYsnm257OLF0Yw2J00nIXSbVzx');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
+            const stripe = Stripe('pk_test_D82iopKvGYsnm257OLF0Yw2J00nIXSbVzx');
+            stripe.redirectToCheckout({
+              sessionId: '<%= @order.checkout_session_id %>'
+            });
           });
-        });
-      </script>
+        </script>
+      </div>
     </div>
   </div>
-</div>
 
 
 
- <!-- To remove -->
+
+
+  <!-- To remove -->

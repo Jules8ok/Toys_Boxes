@@ -1,9 +1,9 @@
-<div class="container default-margin">
+<div class="container">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
 
 
-      <h2>Log in</h2>
+      <h1>Log in</h1>
 
 
 
@@ -20,14 +20,26 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+        <%= f.button :submit, "Log in", :class => 'sign_up_btn' %>
       </div>
       <% end %>
 
-      <%= render "devise/shared/links" %>
+      <%= link_to new_user_registration_path do %>
 
+      <div class="">
+        <div class="devise_registration_links_first">
+          Create an account
+        </div>
 
+        <% end %>
+        <%= link_to new_user_password_path do %>
 
+        <div class="devise_registration_links">
+          Forgot password?
+        </div>
+
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -2,35 +2,9 @@
 
 <div class="product-screen-container">
   <div class="product-screen-left-container">
-    <div class="css-gallery">
 
-      <!-- Main/large images -->
-      <div class="viewer" style="background-image: url('https://kidscook.ie/wp-content/uploads/2014/10/gift-vouchers1.jpg');">
-        <div id="img1" class="img-large">
-          <div style="background-image: url('https://kidscook.ie/wp-content/uploads/2014/10/gift-vouchers1.jpg');"></div>
-        </div>
-        <div id="img2" class="img-large">
-          <div style="background-image: url('https://placehold.it/250x250?text=2');"></div>
-        </div>
-        <div id="img3" class="img-large">
-          <div style="background-image: url('https://placehold.it/250x250?text=3');"></div>
-        </div>
-        <div id="img4" class="img-large">
-          <div style="background-image: url('https://placehold.it/250x250?text=4');"></div>
-        </div>
-      </div>
+    <%= render 'shared/gallery-viewer' %>
 
-      <!-- Thumbnails -->
-      <div>
-        <ul>
-          <li><a href="#img1"><img src="https://kidscook.ie/wp-content/uploads/2014/10/gift-vouchers1.jpg" /></a></li>
-          <li><a href="#img2"><img src="https://placehold.it/50x50?text=2" /></a></li>
-          <li><a href="#img3"><img src="https://placehold.it/50x50?text=3" /></a></li>
-          <li><a href="#img4"><img src="https://placehold.it/50x50?text=4" /></a></li>
-        </ul>
-      </div>
-
-    </div>
   </div>
   <div class="product-screen-right-container">
     <p style="font-weight: bold;">Description</p>
@@ -38,15 +12,25 @@
     <p style="font-weight: bold;">Price</p>
     <div>€<%= @product.price %></div>
     <div class="buttons-call-to-actions">
+
+
       <div ><%= form_tag orders_path do %>
         <%= hidden_field_tag 'product_id', @product.id %>
-        <%= submit_tag 'Add to cart', class: 'card-category-button-show' %>
-        <% end %></div>
-        <div ><%= form_tag orders_path do %>
-          <%= hidden_field_tag 'product_id', @product.id %>
-          <%= submit_tag 'Buy now', class: 'card-category-button-show' %>
-          <% end %></div>
-        </div>
+        <%= submit_tag 'Buy now', class: 'card-category-button-show' %>
+        <% end %>
+
       </div>
 
+      <div ><%= form_tag orders_path do %>
+        <%= hidden_field_tag 'product_id', @product.id %>
+        <%= submit_tag 'Add to cart', class: 'card-category-button-show hidden' %>
+        <% end %>
+
+      </div>
     </div>
+  </div>
+
+</div>
+
+
+

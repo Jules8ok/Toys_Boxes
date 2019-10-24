@@ -47,14 +47,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
-  margin: 120px;
+  margin-left: 120px;
+  margin-top: 80px;
+  margin-right: 120px;
+  margin-bottom: 120px;
 }
 
 .card-category-button {
   background-color: white;
   border-style: solid;
-  border-color: #202346;
-  color:#202346;
+  border-color: #2D2D2D;
+  color:#2D2D2D;
   border-width: 3px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -73,7 +76,7 @@ a {
 .card-category-button {
   display: none;
   &:hover {
-    background-color: #202346;
+    background-color: #2D2D2D;
     color: white;
   }
 }

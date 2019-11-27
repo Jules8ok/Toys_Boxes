@@ -12,7 +12,7 @@ ul,li { list-style:none; }
 .css-gallery .viewer {
   width: 350px;
   height: 350px;
-  border: solid 1px gray;
+  //border: solid 1px gray;
   margin-left: 45px;
 
 }
@@ -43,6 +43,19 @@ ul,li { list-style:none; }
   margin-top: 30px;
 }
 
+.button-sold-out {
+  background-color: white;
+  border-style: solid;
+  border-color: #C6C6C6;
+  color:#C6C6C6;
+  border-width: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
 .card-category-button-show {
   &:hover {
     background-color: #2D2D2D;
@@ -60,6 +73,7 @@ ul,li { list-style:none; }
   display:flex;
   justify-content: space-evenly;
 }
+
 
 
 

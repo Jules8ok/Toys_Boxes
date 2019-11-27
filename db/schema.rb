@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_111929) do
+ActiveRecord::Schema.define(version: 2019_11_27_123940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2019_10_24_111929) do
     t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "address"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -39,6 +38,11 @@ ActiveRecord::Schema.define(version: 2019_10_24_111929) do
     t.string "photo_url"
     t.integer "price_cents", default: 0, null: false
     t.string "sku"
+    t.string "photo_url_one"
+    t.string "photo_url_two"
+    t.string "photo_url_three"
+    t.string "photo_url_four"
+    t.boolean "sold_out"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,7 +53,9 @@ ActiveRecord::Schema.define(version: 2019_10_24_111929) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "delivery_address"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

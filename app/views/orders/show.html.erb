@@ -16,7 +16,7 @@
       <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
     </li>
   </ul>
-  <p>Estimated delivery in <strong>5 business days</strong></p>
+  <p>Estimated delivery in <strong>5 business days</strong> to <%=current_user.address %></p>
 
 </div>
 </div>

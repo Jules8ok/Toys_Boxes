@@ -11,23 +11,36 @@
     <div><%= @product.description %></div>
     <p style="font-weight: bold;">Price</p>
     <div>€<%= @product.price %></div>
+
+    <% if !@product.sold_out? %>
+
     <div class="buttons-call-to-actions">
-
-
       <div ><%= form_tag orders_path do %>
         <%= hidden_field_tag 'product_id', @product.id %>
         <%= submit_tag 'Buy now', class: 'card-category-button-show' %>
         <% end %>
-
       </div>
-
       <div ><%= form_tag orders_path do %>
         <%= hidden_field_tag 'product_id', @product.id %>
         <%= submit_tag 'Add to cart', class: 'card-category-button-show hidden' %>
         <% end %>
-
       </div>
     </div>
+
+    <% else %>
+
+    <div class="buttons-call-to-actions">
+      <div >
+        <%= hidden_field_tag 'product_id', @product.id %>
+        <%= submit_tag 'Sold out', class: 'button-sold-out' %>
+      </div>
+      <div ><%= form_tag orders_path do %>
+        <%= hidden_field_tag 'product_id', @product.id %>
+        <%= submit_tag 'Notify me', class: 'card-category-button-show' %>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
   </div>
 
 </div>

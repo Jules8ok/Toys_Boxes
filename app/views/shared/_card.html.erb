@@ -1,45 +1,31 @@
 
+<div class="cards">
+
 <% @products.each do |product| %>
 
   <%= link_to product_path(product) do %>
-    <div class="cards">
-      <div class="card-super-container">
-        <div class="card-container">
-          <div class="card-category-price">
-           <%= humanized_money_with_symbol(product.price) %>
-         </div>
-         <div class="card-category">
-          <div class="card-category-background-image" style="background-image: url('<%= product.photo_url %>')">
-            toystoystoystoystoys
-          </div>
-        </div>
-      </div>
-      <div class="card-category-button" >
-        ⟶  SHOP
+
+  <div class="card-super-container">
+    <div class="card-container">
+      <div class="card-category-price">
+       <%= humanized_money_with_symbol(product.price) %>
+     </div>
+     <div class="card-category">
+      <div class="card-category-background-image" style="background-image: url(<%= asset_path product.photo_url %>)">
+        toystoystoystoystoys
       </div>
     </div>
-  <% end %>
+  </div>
+  <div class="card-category-button" >
+    ⟶  SHOP
+  </div>
+</div>
+
+<% end %>
 <% end %>
 
-
-
-
-
-
-<div class="card-container">
-  <div class="card-category-price">
-    € 00
-  </div>
-  <div class="card-category">
-    <div class="card-category-background-image" style="background-image: url(<%= asset_path 'coming_soon.jpg' %>) ">
-      More coming soon ...
-    </div>
-  </div>
 </div>
 
 
-
-
-</div>
 
 

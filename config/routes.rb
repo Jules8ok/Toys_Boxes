@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 mount StripeEvent::Engine, at: '/stripe-webhooks'
 
 resources :products, only: [:index, :show]
+resources :carts, only: [:index, :show]
 
 resources :orders, only: [:show, :create, :index] do
   resources :payments, only: :new

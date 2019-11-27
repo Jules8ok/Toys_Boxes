@@ -1,9 +1,9 @@
     <div class="css-gallery">
 
       <!-- Main/large images -->
-      <div class="viewer" style="background-image: url(<%= @product.photo_url %>);background-size: cover;">
+      <div class="viewer" style="background-image: url(<%= asset_path @product.photo_url %>);background-size: cover;">
         <div id="img1" class="img-large">
-          <div style="background-image: url(<%= @product.photo_url %>);"></div>
+          <div style="background-image: url(<%= asset_path @product.photo_url %>);"></div>
         </div>
         <div id="img2" class="img-large">
           <div style="background-image: url('https://placehold.it/250x250?text=2');"></div>
@@ -19,7 +19,7 @@
       <!-- Thumbnails -->
       <div>
         <ul>
-          <li><a href="#img1"><img src=<%= @product.photo_url %> /></a></li>
+          <li><a href="#img1"><img src=<%= asset_path @product.photo_url %> /></a></li>
           <li><a href="#img2"><img src="https://placehold.it/50x50?text=2" /></a></li>
           <li><a href="#img3"><img src="https://placehold.it/50x50?text=3" /></a></li>
           <li><a href="#img4"><img src="https://placehold.it/50x50?text=4" /></a></li>

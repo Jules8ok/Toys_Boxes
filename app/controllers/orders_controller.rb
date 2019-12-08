@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
 
   def create
-    #stripe_api_key = '<%=Figaro.env.stripe_api_key%>'
-    Stripe.api_key = 'sk_test_AvFSR1z9OtrXuymMq6ohpTpC00WmjcIc4z'
+    Stripe.api_key = Figaro.env.stripe_api_key
     product = Product.find(params[:product_id])
     order  = Order.create!(product: product, product_sku: product.sku, amount: product.price, state: 'pending', user: current_user)
     session = Stripe::Checkout::Session.create(

@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
+gem 'sinatra'
 gem 'figaro'
 gem 'geocoder'
 

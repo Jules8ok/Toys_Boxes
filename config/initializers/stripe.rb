@@ -1,5 +1,5 @@
 
-
+=begin
 Rails.configuration.stripe = {
   # ...
   publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
@@ -18,3 +18,6 @@ StripeEvent.signing_secret = Rails.configuration.stripe[:signing_secret]
 StripeEvent.configure do |events|
   events.subscribe 'checkout.session.completed', StripeCheckoutSessionService.new
 end
+
+Comment_stripe
+=end

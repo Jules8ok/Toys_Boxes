@@ -22,7 +22,7 @@ gem 'stripe_event'
 gem 'sinatra'
 gem 'figaro'
 gem 'geocoder'
-gem 'sendgrid-ruby'
+gem 'mailjet'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

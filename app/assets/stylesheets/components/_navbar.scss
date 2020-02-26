@@ -27,8 +27,19 @@
   .nav-link  {
     color: white !important;
   }
-
 }
+
+.navbar-event {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .nav-link  {
+    color: white !important;
+  }
+}
+
+
 .user_icon_empty{
   margin-top: 7px;
 }

@@ -1,7 +1,7 @@
 
 <div class="cards">
 
-<% @products.each do |product| %>
+  <% @products.each do |product| %>
 
   <%= link_to product_path(product) do %>
 
@@ -11,9 +11,15 @@
        <%= humanized_money_with_symbol(product.price) %>
      </div>
      <div class="card-category">
+      <% if product.photo_url.nil? %>
+       <div class="card-category-background-image" style="background-image: url(<%= asset_path "coming_soon.jpg" %>)">
+        toystoystoystoystoys
+      </div>
+      <% else %>
       <div class="card-category-background-image" style="background-image: url(<%= asset_path product.photo_url %>)">
         toystoystoystoystoys
       </div>
+      <% end %>
     </div>
   </div>
   <div class="card-category-button" >

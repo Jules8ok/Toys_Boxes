@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get 'events',         to: 'pages#events',    as: :events
 mount StripeEvent::Engine, at: '/stripe-webhooks'
 
 resources :products, only: [:index, :show]
